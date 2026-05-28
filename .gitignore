@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Modelos entrenados (se generan en fases posteriores)
+*.pkl
+
+# Configuración local de editores
+.vscode/
+.idea/
