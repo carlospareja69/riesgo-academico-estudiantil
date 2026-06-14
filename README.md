@@ -6,7 +6,7 @@ Proyecto integrador del Diplomado en Desarrollo Web para Analítica de Datos. Es
 
 ## Problema y pregunta analítica
 
-En las instituciones de educación secundaria, un número significativo de estudiantes presenta bajo rendimiento académico que puede terminar en la reprobación de asignaturas. Los coordinadores académicos y profesores no cuentan actualmente con una herramienta para identificar de forma temprana a los estudiantes en riesgo y suelen detectar el problema cuando el periodo ya está muy avanzado.
+En las instituciones de educación secundaria, un número significativo de estudiantes presenta bajo rendimiento académico que puede terminar en la reprobación de asignaturas. Los coordinadores académicos y profesores no cuentan actualmente con una herramienta para identificar de forma temprana a los estudiantes en riesgo, y suelen detectar el problema cuando el periodo ya está muy avanzado.
 
 **Pregunta analítica:** ¿Es posible clasificar el nivel de riesgo académico de un estudiante de secundaria (con riesgo / sin riesgo) a partir de sus ausencias, tiempo de estudio, materias reprobadas previamente y la calificación del primer periodo, con el fin de apoyar al coordinador académico en la asignación temprana de acompañamiento y tutorías?
 
@@ -28,7 +28,7 @@ En las instituciones de educación secundaria, un número significativo de estud
 
 ## Resultados del modelo
 
-Se entrenaron y se compararon tres modelos de clasificación:
+Se entrenaron y compararon tres modelos de clasificación:
 
 | Modelo | Accuracy | F1-score | Precision | Recall | AUC-ROC |
 |---|---|---|---|---|---|
@@ -36,7 +36,7 @@ Se entrenaron y se compararon tres modelos de clasificación:
 | Random Forest | 87.7% | 61.9% | 59.1% | 65.0% | 90.2% |
 | Pipeline LR+Scaler | 86.9% | 56.4% | 57.9% | 55.0% | 89.2% |
 
-**Modelo seleccionado:** Regresión Logística simple  
+**Modelo seleccionado:** Regresión Logística simple
 **Justificación:** Mayor F1-score (66.7%) sobre el conjunto de prueba. Detecta 14 de 20 estudiantes en riesgo (Recall: 70%).
 
 ---
@@ -48,39 +48,20 @@ El proyecto sigue la metodología **CRISP-DM** (Cross Industry Standard Process 
 ---
 
 ## Arquitectura de la solución
-[Dataset original] → [Pipeline limpieza] → [Modelo ML] → [Dashboard Streamlit]
 
 Ver detalles en `docs/arquitectura.md`.
 
 ---
 
 ## Estructura del repositorio
-riesgo-academico-estudiantil/
 
-├── data/
-│   ├── raw/                    ← Dataset original
-│   └── processed/              ← Dataset limpio y conjuntos train/test
-├── docs/
-│   ├── ficha_proyecto.md
-│   ├── analisis_dataset.md
-│   ├── wireframe_dashboard.png
-│   ├── comparacion_modelos.png
-│   ├── matriz_y_roc.png
-│   ├── diccionario_datos.md
-│   ├── arquitectura.md
-│   └── reflexion_etica.md
-├── models/
-│   ├── modelo_final.pkl
-│   ├── pipeline_final.pkl
-│   └── model_metadata.json
-├── notebooks/
-│   ├── 01_exploracion.ipynb
-│   ├── 02_eda_limpieza.ipynb
-│   └── 03_modelado.ipynb
-├── app_final.py
-├── .gitignore
-├── requirements.txt
-└── README.md
+- `data/raw/` — Dataset original (nunca modificar)
+- `data/processed/` — Dataset limpio y conjuntos train/test
+- `docs/` — Documentación completa del proyecto
+- `models/` — Modelo serializado y metadatos
+- `notebooks/` — Notebooks de exploración, limpieza y modelado
+- `app_final.py` — Dashboard Streamlit
+- `requirements.txt` — Dependencias del proyecto
 
 ---
 
@@ -103,5 +84,5 @@ El resultado del modelo es una **alerta de apoyo**, no una decisión automática
 
 ## Autor
 
-Carlos Andrés Pareja Osorno — Tecnología en Desarrollo de Software  
+Carlos Andrés Pareja Osorno — Tecnología en Desarrollo de Software
 Diplomado en Desarrollo Web para Analítica de Datos — 2026
