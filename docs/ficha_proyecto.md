@@ -63,4 +63,4 @@ El propósito principal es apoyar la decisión del coordinador académico sobre 
 
 ## 10. URL del repositorio GitHub
 
-https://github.com/carlospareja69/riesgo-academico-estudiantil
+_(completar con la URL de tu repositorio una vez creado)_
