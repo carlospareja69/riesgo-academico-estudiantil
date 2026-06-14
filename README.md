@@ -6,7 +6,7 @@ Proyecto integrador del Diplomado en Desarrollo Web para Analítica de Datos. Es
 
 ## Problema y pregunta analítica
 
-En las instituciones de educación secundaria, un número significativo de estudiantes presenta bajo rendimiento académico que puede terminar en la reprobación de asignaturas. Los coordinadores académicos y profesores no cuentan actualmente con una herramienta para identificar de forma temprana a los estudiantes en riesgo, y suelen detectar el problema cuando el periodo ya está muy avanzado.
+En las instituciones de educación secundaria, un número significativo de estudiantes presenta bajo rendimiento académico que puede terminar en la reprobación de asignaturas. Los coordinadores académicos y profesores no cuentan actualmente con una herramienta para identificar de forma temprana a los estudiantes en riesgo y suelen detectar el problema cuando el periodo ya está muy avanzado.
 
 **Pregunta analítica:** ¿Es posible clasificar el nivel de riesgo académico de un estudiante de secundaria (con riesgo / sin riesgo) a partir de sus ausencias, tiempo de estudio, materias reprobadas previamente y la calificación del primer periodo, con el fin de apoyar al coordinador académico en la asignación temprana de acompañamiento y tutorías?
 
@@ -28,7 +28,7 @@ En las instituciones de educación secundaria, un número significativo de estud
 
 ## Resultados del modelo
 
-Se entrenaron y compararon tres modelos de clasificación:
+Se entrenaron y se compararon tres modelos de clasificación:
 
 | Modelo | Accuracy | F1-score | Precision | Recall | AUC-ROC |
 |---|---|---|---|---|---|
@@ -55,24 +55,15 @@ Ver detalles en `docs/arquitectura.md`.
 ---
 
 ## Estructura del repositorio
-riesgo-academico-estudiantil/
 
-Archivos git/
-├── data/
-│   ├── raw/student-por.csv
-│   └── processed/ (5 CSV)
-├── docs/ (9 archivos)
-├── models/ (3 archivos)
-├── notebooks/ (3 notebooks)
-├── src/
-│   ├── __init__.py
-│   └── ml/
-│       ├── __init__.py
-│       └── entrenar_modelo.py
-├── app_final.py  ← mañana
-├── .gitignore
-├── README.md
-└── requirements.txt
+- `data/raw/` — Dataset original (nunca modificar)
+- `data/processed/` — Dataset limpio y conjuntos train/test
+- `docs/` — Documentación completa del proyecto
+- `models/` — Modelo serializado y metadatos
+- `notebooks/` — Notebooks de exploración, limpieza y modelado
+- `src/ml/entrenar_modelo.py` — Script de entrenamiento local reproducible
+- `app_final.py` — Dashboard Streamlit
+- `requirements.txt` — Dependencias del proyecto
 
 ---
 
