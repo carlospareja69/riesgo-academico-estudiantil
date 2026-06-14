@@ -58,51 +58,28 @@ Ver detalles en `docs/arquitectura.md`.
 riesgo-academico-estudiantil/
 
 ├── data/
-
-│   ├── raw/                    ← Dataset original
-
+│   ├── raw/                    ← Dataset origina
 │   └── processed/              ← Dataset limpio y conjuntos train/test
-
 ├── docs/
-
 │   ├── ficha_proyecto.md
-
 │   ├── analisis_dataset.md
-
 │   ├── wireframe_dashboard.png
-
 │   ├── comparacion_modelos.png
-
 │   ├── matriz_y_roc.png
-
 │   ├── diccionario_datos.md
-
 │   ├── arquitectura.md
-
 │   └── reflexion_etica.md
-
 ├── models/
-
 │   ├── modelo_final.pkl
-
 │   ├── pipeline_final.pkl
-
 │   └── model_metadata.json
-
 ├── notebooks/
-
 │   ├── 01_exploracion.ipynb
-
 │   ├── 02_eda_limpieza.ipynb
-
 │   └── 03_modelado.ipynb
-
 ├── app_final.py
-
 ├── .gitignore
-
 ├── requirements.txt
-
 └── README.md
 
 ---
