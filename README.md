@@ -57,13 +57,22 @@ Ver detalles en `docs/arquitectura.md`.
 ## Estructura del repositorio
 riesgo-academico-estudiantil/
 
-- `data/raw/` — Dataset original (nunca modificar)
-- `data/processed/` — Dataset limpio y conjuntos train/test
-- `docs/` — Documentación completa del proyecto
-- `models/` — Modelo serializado y metadatos
-- `notebooks/` — Notebooks de exploración, limpieza y modelado
-- `app_final.py` — Dashboard Streamlit
-- `requirements.txt` — Dependencias del proyecto
+Archivos git/
+├── data/
+│   ├── raw/student-por.csv
+│   └── processed/ (5 CSV)
+├── docs/ (9 archivos)
+├── models/ (3 archivos)
+├── notebooks/ (3 notebooks)
+├── src/
+│   ├── __init__.py
+│   └── ml/
+│       ├── __init__.py
+│       └── entrenar_modelo.py
+├── app_final.py  ← mañana
+├── .gitignore
+├── README.md
+└── requirements.txt
 
 ---
 
