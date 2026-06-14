@@ -36,7 +36,7 @@ Se entrenaron y compararon tres modelos de clasificación:
 | Random Forest | 87.7% | 61.9% | 59.1% | 65.0% | 90.2% |
 | Pipeline LR+Scaler | 86.9% | 56.4% | 57.9% | 55.0% | 89.2% |
 
-**Modelo seleccionado:** Regresión Logística simple
+**Modelo seleccionado:** Regresión Logística simple  
 **Justificación:** Mayor F1-score (66.7%) sobre el conjunto de prueba. Detecta 14 de 20 estudiantes en riesgo (Recall: 70%).
 
 ---
@@ -48,20 +48,62 @@ El proyecto sigue la metodología **CRISP-DM** (Cross Industry Standard Process 
 ---
 
 ## Arquitectura de la solución
+[Dataset original] → [Pipeline limpieza] → [Modelo ML] → [Dashboard Streamlit]
 
 Ver detalles en `docs/arquitectura.md`.
 
 ---
 
 ## Estructura del repositorio
+riesgo-academico-estudiantil/
 
-- `data/raw/` — Dataset original (nunca modificar)
-- `data/processed/` — Dataset limpio y conjuntos train/test
-- `docs/` — Documentación completa del proyecto
-- `models/` — Modelo serializado y metadatos
-- `notebooks/` — Notebooks de exploración, limpieza y modelado
-- `app_final.py` — Dashboard Streamlit
-- `requirements.txt` — Dependencias del proyecto
+├── data/
+
+│   ├── raw/                    ← Dataset original
+
+│   └── processed/              ← Dataset limpio y conjuntos train/test
+
+├── docs/
+
+│   ├── ficha_proyecto.md
+
+│   ├── analisis_dataset.md
+
+│   ├── wireframe_dashboard.png
+
+│   ├── comparacion_modelos.png
+
+│   ├── matriz_y_roc.png
+
+│   ├── diccionario_datos.md
+
+│   ├── arquitectura.md
+
+│   └── reflexion_etica.md
+
+├── models/
+
+│   ├── modelo_final.pkl
+
+│   ├── pipeline_final.pkl
+
+│   └── model_metadata.json
+
+├── notebooks/
+
+│   ├── 01_exploracion.ipynb
+
+│   ├── 02_eda_limpieza.ipynb
+
+│   └── 03_modelado.ipynb
+
+├── app_final.py
+
+├── .gitignore
+
+├── requirements.txt
+
+└── README.md
 
 ---
 
@@ -84,5 +126,5 @@ El resultado del modelo es una **alerta de apoyo**, no una decisión automática
 
 ## Autor
 
-Carlos Andrés Pareja Osorno — Tecnología en Desarrollo de Software
+Carlos Andrés Pareja Osorno — Tecnología en Desarrollo de Software  
 Diplomado en Desarrollo Web para Analítica de Datos — 2026
