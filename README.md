@@ -56,14 +56,38 @@ Ver detalles en `docs/arquitectura.md`.
 
 ## Estructura del repositorio
 
-- `data/raw/` — Dataset original (nunca modificar)
-- `data/processed/` — Dataset limpio y conjuntos train/test
-- `docs/` — Documentación completa del proyecto
-- `models/` — Modelo serializado y metadatos
-- `notebooks/` — Notebooks de exploración, limpieza y modelado
-- `src/ml/entrenar_modelo.py` — Script de entrenamiento local reproducible
-- `app_final.py` — Dashboard Streamlit
-- `requirements.txt` — Dependencias del proyecto
+```
+riesgo-academico-estudiantil/
+├── data/
+│   ├── raw/student-por.csv          ← Dataset original (nunca modificar)
+│   └── processed/                   ← Dataset limpio y conjuntos train/test
+├── docs/
+│   ├── ficha_proyecto.md
+│   ├── analisis_dataset.md
+│   ├── wireframe_dashboard.png
+│   ├── comparacion_modelos.png
+│   ├── matriz_y_roc.png
+│   ├── diccionario_datos.md
+│   ├── arquitectura.md
+│   └── reflexion_etica.md
+├── models/
+│   ├── modelo_final.pkl
+│   ├── pipeline_final.pkl
+│   └── model_metadata.json
+├── notebooks/
+│   ├── 01_exploracion.ipynb
+│   ├── 02_eda_limpieza.ipynb
+│   └── 03_modelado.ipynb
+├── src/
+│   ├── __init__.py
+│   └── ml/
+│       ├── __init__.py
+│       └── entrenar_modelo.py       ← Script de entrenamiento local
+├── app_final.py                     ← Dashboard Streamlit
+├── .gitignore
+├── requirements.txt
+└── README.md
+```
 
 ---
 
